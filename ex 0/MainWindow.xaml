@@ -5,20 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ex_0"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="800">
+        Title="MainWindow" Height="450" Width="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width= "1*"/>
-            <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height ="5*"/>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="6*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <StackPanel  VerticalAlignment="Top" HorizontalAlignment="Center">
-            <TextBlock Text="UserInput"/>
-        </StackPanel>
-        
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="First Name" FontSize="12" />
+        <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Last Name" FontSize="12"/>
+        <TextBlock Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Text="User Type" FontSize="12"/>
+        <TextBox Name="firstNameTextBox"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="auto" />
+        <TextBox Name="lastNameTextBox" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="auto" />
+        <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Orientation="Horizontal">
+            <RadioButton Content="Student" Padding="4,-1,5,0" UseLayoutRounding="True"/>
+            <RadioButton Content="Teacher"/>
+        </WrapPanel>
+        <TextBlock Grid.Row="3" HorizontalAlignment="Left" Text="Photos:"/>
+        <WrapPanel Grid.Row="4" Grid.ColumnSpan="2">
+            <Image Width="50" Height="50" Visibility="Visible" Margin="5,5,5,5" Source="/cat0.jpeg" Stretch="UniformToFill"/>
+            <Image Width="50" Height="50" Visibility="Visible" Margin="5,5,5,5" Source="/cat1.jpg" Stretch="UniformToFill"/>
+            <Image Width="50" Height="50" Visibility="Visible" Margin="5,5,5,5" Source="/cat2.jpg" Stretch="UniformToFill"/>
+            <Image Width="50" Height="50" Visibility="Visible" Margin="5,5,5,5" Source="/cat3.png" Stretch="UniformToFill"/>
+            <Image Width="50" Height="50" Visibility="Visible" Margin="5,5,5,5" Source="/cat4.jpg" Stretch="UniformToFill"/>
+        </WrapPanel>
+        <Button Name="addUserButton" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,10,5,10"
+                Content="Add user"  Grid.ColumnSpan="2" FontWeight="Bold" Background="White"/>
+
     </Grid>
 </Window>

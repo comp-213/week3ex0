@@ -8,4 +8,24 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="0_n-2bW82Z6m6U2bij.jpeg" />
+    <None Remove="cat0.jpeg" />
+    <None Remove="cat1.jpg" />
+    <None Remove="cat2.jpg" />
+    <None Remove="cat3.png" />
+    <None Remove="cat4.jpg" />
+    <None Remove="MV5BMTQ0MGI4NTgtZTlkNy00YTU5LThjM2ItNDczMGFlZWY2ZWM3XkEyXkFqcGdeQXVyMTM3NDc1OTM2._V1_FMjpg_UX1000_.jpg" />
+    <None Remove="MV5BNGY4MTg3NzgtMmFkZi00NTg5LWExMmEtMWI3YzI1ODdmMWQ1XkEyXkFqcGdeQXVyMjQwMDg0Ng%40%40._V1_.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="0_n-2bW82Z6m6U2bij.jpeg" />
+    <Resource Include="cat0.jpeg" />
+    <Resource Include="cat1.jpg" />
+    <Resource Include="cat2.jpg" />
+    <Resource Include="cat3.png" />
+    <Resource Include="cat4.jpg" />
+  </ItemGroup>
+
 </Project>
