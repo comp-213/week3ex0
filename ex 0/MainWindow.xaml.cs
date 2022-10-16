@@ -20,6 +20,7 @@ namespace ex_0
     /// </summary>
     public partial class MainWindow : Window
     {
+        int numberOfUsers = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -41,13 +42,28 @@ namespace ex_0
                 myCheckBox.Content = $"{firstName} {lastName} ({occupation})";
                 usersStackPanel.Children.Add(myCheckBox);
             }
+            numberOfUsers++;
             firstNameTextBox.Text = "";
             lastNameTextBox.Text = "";
         }
 
         private void removeUserButton_Click(object sender, RoutedEventArgs e)
         {
-           
+            for (int i = 0; i <= numberOfUsers; i++)//loop is needed to check every single checkbox and not stop on the first one,
+            {                                        //oteherwise the foreach loop stops because the size was changed
+                foreach (var element in usersStackPanel.Children)
+                {
+                    if (element is CheckBox)
+                    {
+                        var cb = element as CheckBox;
+                        if ((bool)cb.IsChecked)
+                        {
+                            usersStackPanel.Children.Remove(cb);
+                            break;
+                        }
+                    }
+                }
+            }
         }
     }
 }
