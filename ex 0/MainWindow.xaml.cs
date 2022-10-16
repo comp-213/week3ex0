@@ -24,5 +24,30 @@ namespace ex_0
         {
             InitializeComponent();
         }
+
+        private void addUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            string occupation;
+            string firstName = firstNameTextBox.Text;
+            string lastName = lastNameTextBox.Text;
+            
+            if ((bool)studentRadioButton.IsChecked)
+                occupation = "student";
+            else
+                occupation = "teacher";
+            CheckBox myCheckBox = new CheckBox();
+            if (firstName != "" && lastName != "")
+            {
+                myCheckBox.Content = $"{firstName} {lastName} ({occupation})";
+                usersStackPanel.Children.Add(myCheckBox);
+            }
+            firstNameTextBox.Text = "";
+            lastNameTextBox.Text = "";
+        }
+
+        private void removeUserButton_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
     }
 }

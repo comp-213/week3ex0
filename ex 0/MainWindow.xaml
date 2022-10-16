@@ -26,8 +26,8 @@
         <TextBox Name="firstNameTextBox"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="auto" />
         <TextBox Name="lastNameTextBox" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="auto" />
         <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Orientation="Horizontal">
-            <RadioButton Content="Student" Padding="4,-1,5,0" UseLayoutRounding="True"/>
-            <RadioButton Content="Teacher"/>
+            <RadioButton Name="studentRadioButton" Content="Student" Padding="4,-1,5,0" UseLayoutRounding="True" IsChecked="True"/>
+            <RadioButton Name="teacherRadioButton" Content="Teacher"/>
         </WrapPanel>
         <TextBlock Grid.Row="3" HorizontalAlignment="Left" Text="Photos:"/>
         <WrapPanel Grid.Row="4" Grid.ColumnSpan="2">
@@ -38,13 +38,13 @@
             <Image Width="50" Height="50" Visibility="Visible" Margin="5,5,5,5" Source="/cat4.jpg" Stretch="UniformToFill"/>
         </WrapPanel>
         <Button Name="addUserButton" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,10,5,10"
-                Content="Add user"  Grid.ColumnSpan="2" FontWeight="Bold" Background="White"/>
+                Content="Add user"  Grid.ColumnSpan="2" FontWeight="Bold" Background="White" Click="addUserButton_Click"/>
         <TextBlock Grid.Column="2" Text="Users" VerticalAlignment="Center" Margin="5,0,0,0"/>
         <StackPanel Name="usersStackPanel" Grid.Column="2" Grid.Row="1" Grid.RowSpan="4" Orientation="Vertical">
 
         </StackPanel>
         <Button Name="removeUserButton" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,10,5,10"
-                Content="Remove Selected User" Background="DarkRed" Foreground="White"/>
+                Content="Remove Selected User" Background="DarkRed" Foreground="White" Click="removeUserButton_Click"/>
 
     </Grid>
 </Window>
